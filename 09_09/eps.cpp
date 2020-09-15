@@ -11,15 +11,14 @@ int main(int argc, char *argv[]) {
   
   int N=atoi(argv[1]);
 
-  double under=1.0;
-  double over=1.0;
-
-  for(int i=0;i<N;i++){
-   under /= 2.0;
-    over *= 2.0;
-    cout <<i<<"\t"<<under<<"\t"<<over<<endl<<"-----------------------------------------"<<endl;
-   }
-
+  float eps = 1.0;
+  float one = 1.0;
+  for (int i=0;i<N;i++){
+    eps /=2;
+    one = 1.0 + eps;
+    cout<<i<<"\t"<<one<<"\t"<<eps<<endl<<"---------------------------------------"<<endl;
+  }
+    
   return 0;
 
 }
