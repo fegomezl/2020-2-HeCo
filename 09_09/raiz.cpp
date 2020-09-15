@@ -14,7 +14,7 @@ int main (){
     cout.setf(ios::scientific);
 
     real x = 0;
-    double y = 0;
+    real y = 0;
     real f1,f2;
 
     for (int i = 0 ; i < 100 ; i++){
