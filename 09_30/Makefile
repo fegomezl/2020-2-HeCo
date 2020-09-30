@@ -1,16 +1,22 @@
 
 all: example1.x
 
-test: test_factorial.x
+test: test_factorial.x test_catch2.x test_googletest.x
 
 %.o: %.cpp
 	g++ -c $<
 
-example1.x: example.o factorial.o
+example1.x: example1.o factorial.o
 	g++ $^ -o $@
 
 test_factorial.x: test_factorial.o factorial.o
-	g++ $^ -0 $@
+	g++ $^ -o $@
+
+test_catch2.x: test_catch2.o factorial.o
+	g++ $^ -o $@
+
+test_googletest.x: test_googletest.o factorial.o
+	g++ $^ -o $@ -lgtest
 
 clean:
 	rm rm -f *.x *.o a.out

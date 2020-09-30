@@ -6,7 +6,10 @@ long factorial(long n){
         std::cerr << "ERROR: Cannot compute factorial of negative number\n";
         return 0;
     }
+    else if (n = 0){
+        return 1;
+    }
     else {
-    return n <= 1 ? n : n*factorial(n-1)
+        return n <= 1 ? n : n*factorial(n-1);
     }
         }
